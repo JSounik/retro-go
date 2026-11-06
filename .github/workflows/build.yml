@@ -1,4 +1,3 @@
-yaml
 
 name: Build Custom Retro-Go
 on: workflow_dispatch
@@ -28,7 +27,7 @@ jobs:
       - name: Compile Retro-Go Firmware Image
         run: |
           . ~/esp/esp-idf/export.sh
-          python rg_tool.py --target esp32-s3-devkit release launcher retro-core nes-go smsplus-go gwenesis
+          python rg_tool.py --target esp32-s3-devkit release binary launcher retro-core nes-go smsplus-go gwenesis
 
       - name: Upload Finished Image File
         uses: actions/upload-artifact@v4
